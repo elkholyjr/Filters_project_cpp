@@ -30,9 +30,9 @@ void cpy(){
 
 void save_gr() {
     cout<<"Please enter target file name:"<<endl;
-    char file[1000] ; cin>> file;
-    strcat( file , ".bmp" ) ;
-    writeGSBMP( file , img_in_Gray ) ;
+    string text ; cin >> text ;
+    text = "images/" + text + ".bmp" ;
+    writeGSBMP( text.c_str() , img_in_Gray ) ;
 }
 
 //=======================================================================
@@ -403,12 +403,12 @@ void skew_u(){
 
 void load(){
     cout<<"Please enter file name of the img to process:"<<'\n';
-    char text[1000] = "" ; cin >> text ;
-    strcat( text , ".bmp") ;
+    string text ; cin >> text ;
+    text = "images/" + text + ".bmp" ;
     ifstream in_file( text , std::ifstream::ate | std::ifstream::binary ) ;
     if ( in_file.tellg() > 196000 ) is_colored = true ;
-    if ( is_colored ) readRGBBMP(text , img_in_color );
-    else readGSBMP( text , img_in_Gray ) ;
+    if ( is_colored ) readRGBBMP(text.c_str() , img_in_color );
+    else readGSBMP( text.c_str() , img_in_Gray ) ;
 }
 
 bool option(){
