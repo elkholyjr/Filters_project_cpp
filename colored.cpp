@@ -21,9 +21,9 @@ void cpy_cl(){
 
 void save_clr(){
     cout<<"Please enter target file name:"<<endl;
-    char file[1000] ; cin>> file;
-    strcat( file , ".bmp" ) ;
-    writeRGBBMP(file , img_in_color );
+    string text ; cin >> text ;
+    text = "images/" + text + ".bmp" ;
+    writeRGBBMP(text.c_str() , img_in_color );
 }
 
 //=======================================================================
