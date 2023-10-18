@@ -9,8 +9,8 @@
 
 #include <bits/stdc++.h>
 #include<fstream>
-#include "bmplib.h"
-#include "bmplib.cpp"
+#include "libraries/bmplib.h"
+#include "libraries/bmplib.cpp"
 #include "colored.cpp"
 using namespace std ;
 
